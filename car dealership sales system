@@ -1,0 +1,46 @@
+# Base class
+class Car:
+    def __init__(self, brand, price, model, color):
+        self.brand = brand
+        self.price = price
+        self.model = model
+        self.color = color
+
+    def display_details(self):
+        print(self.brand)
+        print(self.price)
+        print(self.model)
+        print(self.color)
+
+
+# Derived class Car1
+class Car1(Car):
+    def display_details(self):
+        print(self.brand)
+        print(self.price)
+        print(self.model)
+        print(self.color)
+
+
+# Derived class Car2
+class Car2(Car):
+    def display_details(self):
+        print(self.brand)
+        print(self.price)
+        print(self.model)
+        print(self.color)
+
+
+# Input for Car1
+brand1, price1, model1, color1 = input().split()
+
+# Input for Car2
+brand2, price2, model2, color2 = input().split()
+
+# Create objects
+car1 = Car1(brand1, float(price1), model1, color1)
+car2 = Car2(brand2, float(price2), model2, color2)
+
+# Display details
+car1.display_details()
+car2.display_details()
