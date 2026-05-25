@@ -1,0 +1,15 @@
+# Input for Set A
+A = set(map(int, input("Set A: ").split()))
+
+# Input for Set B
+B = set(map(int, input("Set B: ").split()))
+
+# Operations
+union_set = A.union(B)
+intersection_set = A.intersection(B)
+difference_set = A.difference(B)
+
+# Output
+print("Union:", union_set)
+print("Intersection:", intersection_set)
+print("Difference:", difference_set)
