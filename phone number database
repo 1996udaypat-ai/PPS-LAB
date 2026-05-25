@@ -1,0 +1,30 @@
+# Phone Number Database using Dictionary
+
+contacts = {}
+
+# Number of operations
+n = int(input())
+
+for _ in range(n):
+    operation = input().split()
+
+    if operation[0] == "ADD":
+        name = operation[1]
+        phone_number = operation[2]
+
+        # Add or update contact
+        contacts[name] = phone_number
+
+    elif operation[0] == "REMOVE":
+        name = operation[1]
+
+        # Remove contact if it exists
+        contacts.pop(name, None)
+
+    elif operation[0] == "DISPLAY":
+        if not contacts:
+            print("No contacts")
+        else:
+            # Display contacts in alphabetical order
+            for name in sorted(contacts):
+                print(f"{name}: {contacts[name]}")
