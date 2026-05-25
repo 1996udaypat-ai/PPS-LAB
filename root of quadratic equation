@@ -1,0 +1,25 @@
+import math
+
+# Read input coefficients
+a, b, c = map(float, input("Enter coefficients a, b, c: ").split())
+
+# Calculate discriminant
+D = b**2 - 4*a*c
+
+# Check nature of roots and compute accordingly
+if D > 0:
+    root1 = (-b + math.sqrt(D)) / (2*a)
+    root2 = (-b - math.sqrt(D)) / (2*a)
+    print("Roots are real and different")
+    print(f"Root 1 = {root1:.2f}")
+    print(f"Root 2 = {root2:.2f}")
+elif D == 0:
+    root = -b / (2*a)
+    print("Roots are real and same")
+    print(f"Root = {root:.2f}")
+else:
+    real = -b / (2*a)
+    imag = math.sqrt(-D) / (2*a)
+    print("Roots are imaginary")
+    print(f"Root 1 = {real:.2f} + {imag:.2f}i")
+    print(f"Root 2 = {real:.2f} - {imag:.2f}i")
