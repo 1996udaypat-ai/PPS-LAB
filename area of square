@@ -1,0 +1,7 @@
+# Write your code here...
+side = int(input())
+area = side * side
+print(area)
+
+
+
